@@ -1,10 +1,7 @@
 <?php
 
 
-$dbHost = 'localhost';
-$dbName = 'mvc-oop-toets-herk';
-$dbUser = 'root';
-$dbPass = '';
+require "config.php";
 
 $conn = new mysql($dbHost, $dbName, $dbUser, $dbPass);
 
@@ -18,6 +15,14 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        
+        ?>
+        <tr>
+            <td><?$echo $row["Name"]</td>
+            <td><?$echo $row["Ranking"]</td>
+            <td><?$echo $row["Length"]</td>
+            <td><?$echo $row["Weight"]</td>
+            <td><?$echo $row["Age"]</td>
+            <td><?$echo $row["WinsByKnockout"]</td>
+        </tr>
     }
 }
