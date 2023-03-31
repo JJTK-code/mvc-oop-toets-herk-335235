@@ -1,0 +1,15 @@
+
+h1 {
+    color: purple;
+}
+
+.tabel {
+    margin-left: 700px;
+    margin-right: 700px;
+    border: 5px outset purple;
+}
+
+table {
+    text-align: center;
+}
+
